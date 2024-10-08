@@ -10,8 +10,3 @@ module.exports = router;
 
 
 
-/**/
-/*router.get('/api/movies', movieController.listMovies);*/
-router.post('/api/movies', movieController.insertSingleMovie);
-router.put('/api/movies/:id', movieController.updateSingleMovie);
-router.delete('/api/movies/:id', movieController.deleteSingleMovie);
