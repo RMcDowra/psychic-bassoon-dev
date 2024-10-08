@@ -1,12 +1,16 @@
 const express = require("express");
 const app = express();
 require('dotenv').config();
-const routes = require('./server/route/routes');
+const routes = require('./server/route/movieRoutes');
 const cors = require('cors');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const { urlencoded } = require('body-parser')
 const { ObjectId } = require('mongodb')
 const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = `mongodb+srv://rmcdowra:${process.env.MONGO_URI}@cluster0.0bqty.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`; 
+
+console.log(uri);
 
 // -----------------------------------------------------
 
